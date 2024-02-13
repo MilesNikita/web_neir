@@ -71,7 +71,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -80,6 +79,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = 'app/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "app/static/"),
+)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Neural Network</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Interface</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/style_neir.css' %}">
 </head>
 <body>
-    <h2>Neural Network Page</h2>
-    
+    <div class="container">
+        <div class="header">
+            <h1>Neural Network Interface</h1>
+        </div>
+        <div class="content">
+            <div class="options">
+                <div class="option">
+                    <h2>Choose Model:</h2>
+                    <select id="model" name="model">
+                        <option value="model1">Model 1</option>
+                        <option value="model2">Model 2</option>
+                        <option value="model3">Model 3</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <h2>Choose Processing Type:</h2>
+                    <label><input type="radio" name="process" value="photo"> Photo</label>
+                    <label><input type="radio" name="process" value="video"> Video</label>
+                    <label><input type="radio" name="process" value="livestream"> Livestream</label>
+                </div>
+                <button type="submit">Process</button>
+            </div>
+            <div class="results">
+                <h2>Results:</h2>
+                <div id="results">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

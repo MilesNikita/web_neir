@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h2>Окно входа</h2>
-    <form method="post">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="Username"><br>
-        <input type="password" name="password" placeholder="Password"><br>
-        <input type="submit" value="Login">
-    </form>
+
+<div class="login-container">
+    <div class="form-on-left">
+        <h2>Поиск объектов и людей</h2>
+        <p>Данное web-приложение предназначено для поиска объектов и людей на фото или видео</p>
+    </div>
+    <div class="login-box">
+        <div class="logo">
+            <!-- Ваше лого -->
+        </div>
+        <form method="post" action="{% url 'login' %}">
+            <h2>Добро пожаловать</h2>
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Логин">
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Пароль">
+            </div>
+            <button type="submit" class="btn">Войти</button>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
