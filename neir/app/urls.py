@@ -7,4 +7,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/login/')),
     path('login/', login_view, name='login'),
     path('neural_network/', views.neural_network, name='neural_network'),
+    path('run_neural_network/', views.run_neural_network, name='run_neural_network'),
 ]
