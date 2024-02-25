@@ -1,8 +1,6 @@
-/* static/styles.css */
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background: linear-gradient(120deg, #d4fc79, #96e6a1);
     margin: 0;
     padding: 0;
 }
@@ -56,9 +54,15 @@ h1 {
 }
 
 .result {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#result-image {
+    max-width: 100%; 
+    max-height: 100%;
 }
 
 .result h2 {

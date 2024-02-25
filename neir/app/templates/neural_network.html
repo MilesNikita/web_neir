@@ -8,37 +8,27 @@
     <link rel="stylesheet" href="{% static 'css/style_neir.css' %}">
 </head>
 <body>
+   <form id="image-form" enctype="multipart/form-data">
     <div class="container">
         <h1>Поиск объектов</h1>
         <div class="options">
-            <div class="option">
-                <label for="model">Выбор модели:</label>
-                <select name="model" id="model">
-                    <option value="model1">Модель 1</option>
-                    <option value="model2">Модель 2</option>
-                    <!-- Add more options as needed -->
-                </select>
-            </div>
             <div class="option">
                 <label for="input-type">Выберите тип входных данных:</label>
                 <select name="input-type" id="input-type">
                     <option value="image">Изображение</option>
                     <option value="video">Видео</option>
-                    <option value="live-stream">Видеопоток</option>
                 </select>
             </div>
         </div>
         <div class="preview">
-            <div class="placeholder" id="placeholder">
-            </div>
             <input type="file" id="image-input" accept="image/*">
-            <button id="detect-btn">Поиск</button>
+            <button type="button" id="detect-btn">Поиск</button>
         </div>
         <div class="result" id="result">
-            <h2>Результат:</h2>
-            <img id="result-image" src="#" alt="Результат">
+            <img id="result-image" src="#" alt="">
         </div>
     </div>
+</form>
     {% load static %}
     <script src="{% static 'js/neir.js' %}"></script>
 </body>
